@@ -35,7 +35,7 @@
 
   <giscus-widget
     id="comments"
-    repo="kimeiga/u"
+    repo="kimeiga/v"
     repoid="R_kgDOHjDjuw="
     category="General"
     categoryid="DIC_kwDOHjDju84CP6h7"
