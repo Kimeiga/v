@@ -21,9 +21,12 @@
   }
 </script>
 
-<main>
+<main style="max-width: 80rem; margin: auto;">
+  <h1>vavava</h1>
+  <p>Post hard; just post it!</p>
   <div style="text-align: center;">
     <input
+      style="width: 20rem;"
       type="text"
       placeholder="Paste a YouTube link for Markdown Formating"
       bind:value={youtubeLink}
