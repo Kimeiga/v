@@ -44,7 +44,7 @@
 
   <giscus-widget
     id="comments"
-    repo="kimeiga/v"
+    repo="kimeiga/vavava"
     repoid="R_kgDOHk59og"
     category="General"
     categoryid="DIC_kwDOHk59os4CP7td"
