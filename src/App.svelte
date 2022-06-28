@@ -2,6 +2,7 @@
   import "giscus";
 
   let youtubeLink = "";
+  let youtubeLinkToMarkdownLinkFeedback = "";
 
   function youtubeLinkToMarkdownLink() {
     // https://www.youtube.com/watch?v=AjBediJpL3k
@@ -13,6 +14,10 @@
     navigator.clipboard.writeText(markdownString).then(
       function () {
         console.log("Async: Copying to clipboard was successful!");
+        youtubeLinkToMarkdownLinkFeedback = "Copied to clipboard!";
+        setTimeout(() => {
+          youtubeLinkToMarkdownLinkFeedback = "";
+        }, 2000);
       },
       function (err) {
         console.error("Async: Could not copy text: ", err);
@@ -26,14 +31,15 @@
   <p>Post hard; just post it!</p>
   <div style="text-align: center;">
     <input
-      style="width: 20rem;"
+      style="width: 28rem;"
       type="text"
-      placeholder="Paste a YouTube link for Markdown Formating"
+      placeholder="Paste a YouTube link for Markdown Formating, then press enter"
       bind:value={youtubeLink}
       on:keyup={(e) => {
         e.code == "Enter" && youtubeLinkToMarkdownLink();
       }}
     />
+    <p>{youtubeLinkToMarkdownLinkFeedback}</p>
   </div>
 
   <giscus-widget
