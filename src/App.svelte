@@ -36,9 +36,9 @@
   <giscus-widget
     id="comments"
     repo="kimeiga/v"
-    repoid="R_kgDOHjDjuw="
+    repoid="R_kgDOHk59og"
     category="General"
-    categoryid="DIC_kwDOHjDju84CP6h7"
+    categoryid="DIC_kwDOHk59os4CP7td"
     mapping="pathname"
     reactionsenabled="1"
     emitmetadata="1"
