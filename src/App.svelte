@@ -8,6 +8,11 @@
     // https://www.youtube.com/watch?v=AjBediJpL3k
     let youtubeID = youtubeLink.match(/(?<=watch\?v=).*/);
 
+    // for mobile share copy link
+    if (!youtubeID) {
+      youtubeLink.match(/(?<=\/).*/);
+    }
+
     // [![](https://img.youtube.com/vi/LeVESAXm3U4/0.jpg)](https://www.youtube.com/watch?v=LeVESAXm3U4)
     let markdownString = `[![](https://img.youtube.com/vi/${youtubeID}/0.jpg)](https://www.youtube.com/watch?v=${youtubeID})`;
 
@@ -27,18 +32,26 @@
 </script>
 
 <main style="max-width: 80rem; margin: auto; padding: 1rem;">
-  <h1>vavava</h1>
-  <p>Post hard; just post it!</p>
+  <span
+    ><h1 style="display: inline; margin-right: 0.5rem;">vavava</h1>
+
+    haki social media</span
+  >
   <div style="text-align: center;">
+    <!-- Paste a YouTube link for Markdown Formating, then press enter -->
     <input
-      style="width: 28rem;"
+      class="form-control input-contrast gsc-comment-box-textarea "
       type="text"
-      placeholder="Paste a YouTube link for Markdown Formating, then press enter"
+      placeholder="Format Youtube Link"
       bind:value={youtubeLink}
       on:keyup={(e) => {
         e.code == "Enter" && youtubeLinkToMarkdownLink();
       }}
     />
+    <button
+      class="ml-1 border rounded-md items-center btn btn-secondary"
+      on:click={youtubeLinkToMarkdownLink}>Format</button
+    >
     <p>{youtubeLinkToMarkdownLinkFeedback}</p>
   </div>
 
