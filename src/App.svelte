@@ -10,8 +10,10 @@
 
     // for mobile share copy link
     if (!youtubeID) {
-      youtubeLink.match(/(?<=\/).*/);
+      youtubeLink.match(/(?<=youtube\.be\/).*/);
     }
+
+    // TODO: shorts
 
     // [![](https://img.youtube.com/vi/LeVESAXm3U4/0.jpg)](https://www.youtube.com/watch?v=LeVESAXm3U4)
     let markdownString = `[![](https://img.youtube.com/vi/${youtubeID}/0.jpg)](https://www.youtube.com/watch?v=${youtubeID})`;
