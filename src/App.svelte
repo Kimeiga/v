@@ -26,7 +26,7 @@
   }
 </script>
 
-<main style="max-width: 80rem; margin: auto;">
+<main style="max-width: 80rem; margin: auto; padding: 1rem;">
   <h1>vavava</h1>
   <p>Post hard; just post it!</p>
   <div style="text-align: center;">
