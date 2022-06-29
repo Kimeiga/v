@@ -10,7 +10,7 @@
 
     // for mobile share copy link
     if (!youtubeID) {
-      youtubeLink.match(/(?<=youtube\.be\/).*/);
+      youtubeLink.match(/(?<=youtu\.be\/).*/);
     }
 
     // TODO: shorts
